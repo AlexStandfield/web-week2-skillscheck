@@ -3,32 +3,49 @@
 
 //////////////////STEP 1////////////////////
 //Create an array called 'groceries' that contains three grocery items as a string
-
+const groceries = ['milk', 'eggs', 'cereal']
 // Code Here
 
 //////////////////STEP 2////////////////////
 //Create a variable called 'yourName' that is equal to your name as a string
-
+const yourName = 'Alex'
 // Code Here
 
 //////////////////STEP 3////////////////////
 //Create a function called 'setGroceryListTitle' that takes in one parameter called x. The function should return a string of 'XPARAM's Grocery List'.
-
+const setGroceryListTitle = (x) => {
+    return `${x}'s Grocery List`
+}
 // Code Here
 
 //////////////////STEP 4////////////////////
 //Create a function called 'addItem' that takes in one paramter called item. Add the item param to the end of the groceries array created above. Inside of addItem, invoke displayData() which is a function we created that takes care of some of the leg work unrelated to this module.
-
+const addItem = (item) => {
+   groceries.push(item)
+    displayData()
+}
 // Code Here
 
 //////////////////STEP 5////////////////////
 //Create a function called removeItem that takes in one parmater called index. Inside of the function remove the item from the groceries array above using splice. Invoke the displayData() function again.
-
+const removeItem = (index) => {
+    groceries.splice(groceries.length - 1, 1)
+    displayData()
+}
 // Code Here
 
 //////////////////STEP 6////////////////////
 //Create a function called 'checkGroceryCount'. Inside of the function check the total number of groceries you need to get using .length. Using an else/if statement, check if the number is greater than or equal to 5, return the string 'That looks like a big trip' from the function. If the number of groceries is equal to one, return the string '1 item'. For numbers between 1 and 5, return the string 'NUMBER items' with number replacing the number of items
-
+const checkGroceryCount = () => {
+    const items = groceries.length
+    if(groceries.length >= 5){
+        return 'That looks like a big trip'
+    } else if (groceries.length === 1){
+        return '1 item'
+    } else if (groceries.length === 2 || groceries.length === 3 || groceries.length === 4){
+        return `${items} items`
+    }
+}
 // Code Here
 
 //////////////////STEP 6////////////////////
